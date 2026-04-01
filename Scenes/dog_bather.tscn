@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cmrpxsswo3aoe"]
+
+[ext_resource type="Texture2D" uid="uid://c6dysdbnqloh1" path="res://2_Characters/Character_Generator/Bodies/32x32/Body_32x32_02.png" id="1_sa2kj"]
+[ext_resource type="Texture2D" uid="uid://cnyvridoomj7o" path="res://2_Characters/Character_Generator/Hairstyles/32x32/Hairstyle_05_32x32_02.png" id="2_1edkg"]
+[ext_resource type="Texture2D" uid="uid://bbkcn0qc1tpfq" path="res://2_Characters/Character_Generator/Outfits/32x32/Outfit_01_32x32_02.png" id="3_mpvem"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p12tt"]
+atlas = ExtResource("1_sa2kj")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwlgv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p12tt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqs60"]
+atlas = ExtResource("2_1edkg")
+region = Rect2(96, 0, 32, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2yrn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqs60")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooapu"]
+atlas = ExtResource("3_mpvem")
+region = Rect2(96, 0, 32, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xmn1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooapu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DogBather" type="CharacterBody2D" unique_id=1022089548]
+
+[node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=372588319]
+sprite_frames = SubResource("SpriteFrames_mwlgv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1839104494]
+
+[node name="HairSprite" type="AnimatedSprite2D" parent="." unique_id=1024322072]
+sprite_frames = SubResource("SpriteFrames_i2yrn")
+
+[node name="Clothes" type="AnimatedSprite2D" parent="." unique_id=1711804512]
+sprite_frames = SubResource("SpriteFrames_xmn1w")
