@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwekfsan4qr5o"]
+
+[ext_resource type="PackedScene" uid="uid://d2wtw72xoem18" path="res://Scenes/bath_menu.tscn" id="1_khpw1"]
+[ext_resource type="PackedScene" uid="uid://b6hy2viqsvooh" path="res://Scenes/showerhead.tscn" id="2_ccphs"]
+[ext_resource type="PackedScene" uid="uid://c6tw4g6ymm6cr" path="res://Scenes/soap_scruber.tscn" id="3_ccphs"]
+[ext_resource type="Texture2D" uid="uid://clijlaq3kd5hj" path="res://australian-shepherd-dog-face-portrait-cartoon-illustration-cute-friendly-dog-smiling_647322-185.jpg" id="4_n5hws"]
+
+[node name="TestSceneForMenus" type="Node2D" unique_id=1312525357]
+
+[node name="bath-menu" parent="." unique_id=1747866361 instance=ExtResource("1_khpw1")]
+position = Vector2(-353, 87)
+
+[node name="bath-menu2" parent="." unique_id=1204698916 instance=ExtResource("1_khpw1")]
+position = Vector2(-355, -208)
+
+[node name="bath-menu3" parent="." unique_id=1653019506 instance=ExtResource("1_khpw1")]
+position = Vector2(-355, -60)
+
+[node name="showerhead" parent="." unique_id=1513803058 instance=ExtResource("2_ccphs")]
+position = Vector2(252, -170)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1093833378]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1931471016]
+
+[node name="SoapScruber" parent="." unique_id=47193256 instance=ExtResource("3_ccphs")]
+position = Vector2(254, 2)
+
+[node name="DogTester" type="Sprite2D" parent="." unique_id=406165392]
+z_index = -2
+position = Vector2(-14, 4)
+texture = ExtResource("4_n5hws")

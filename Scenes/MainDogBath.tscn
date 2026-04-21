@@ -13490,6 +13490,7 @@ sources/0 = SubResource("TileSetAtlasSource_ohla6")
 [node name="DogBather" parent="." unique_id=1022089548 instance=ExtResource("1_vao3e")]
 z_index = 5
 position = Vector2(117, 74)
+move_speed = 300.0
 
 [node name="Camera2D" type="Camera2D" parent="DogBather" unique_id=711180237]
 zoom = Vector2(2.2, 2.2)

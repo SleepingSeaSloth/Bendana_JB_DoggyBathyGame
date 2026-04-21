@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b6hy2viqsvooh"]
+
+[ext_resource type="Script" uid="uid://b2f1qtmf60lai" path="res://node_2d.gd" id="1_hp28j"]
+[ext_resource type="Texture2D" uid="uid://cbbwoyiygusnu" path="res://ShowerHead.webp" id="2_yr4q5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43ah5"]
+size = Vector2(156, 156)
+
+[node name="showerhead" type="Node2D" unique_id=1513803058]
+script = ExtResource("1_hp28j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2097401721]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_yr4q5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1891945756]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=632431762]
+shape = SubResource("RectangleShape2D_43ah5")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
