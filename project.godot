@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 global="*uid://ckwlf7hnoxlwk"
 
+[global_group]
+
+droppable1=""
+droppable2=""
+droparea=""
+
 [input]
 
 move_up={

@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://b6hy2viqsvooh" path="res://Scenes/showerhead.tscn" id="2_ccphs"]
 [ext_resource type="PackedScene" uid="uid://c6tw4g6ymm6cr" path="res://Scenes/soap_scruber.tscn" id="3_ccphs"]
 [ext_resource type="Texture2D" uid="uid://clijlaq3kd5hj" path="res://australian-shepherd-dog-face-portrait-cartoon-illustration-cute-friendly-dog-smiling_647322-185.jpg" id="4_n5hws"]
+[ext_resource type="PackedScene" uid="uid://ccpe7x1sngfd1" path="res://Scenes/dirt_1_sprite.tscn" id="5_n13ws"]
+[ext_resource type="PackedScene" uid="uid://cn0i1fmjxmy0q" path="res://Scenes/bubble.tscn" id="6_vbapg"]
+[ext_resource type="PackedScene" uid="uid://w277iwrnft6j" path="res://Scenes/spawn_collision.tscn" id="8_si1lv"]
 
 [node name="TestSceneForMenus" type="Node2D" unique_id=1312525357]
 
@@ -30,3 +33,59 @@ position = Vector2(254, 2)
 z_index = -2
 position = Vector2(-14, 4)
 texture = ExtResource("4_n5hws")
+
+[node name="DirtCollection" type="Node" parent="." unique_id=1820993591]
+
+[node name="Dirt1Sprite" parent="DirtCollection" unique_id=1233341557 instance=ExtResource("5_n13ws")]
+position = Vector2(-118, -32)
+
+[node name="Dirt1Sprite2" parent="DirtCollection" unique_id=493136774 instance=ExtResource("5_n13ws")]
+position = Vector2(16, -68)
+
+[node name="Dirt1Sprite5" parent="DirtCollection" unique_id=830662424 instance=ExtResource("5_n13ws")]
+position = Vector2(-83, -214)
+
+[node name="Dirt1Sprite4" parent="DirtCollection" unique_id=1266555988 instance=ExtResource("5_n13ws")]
+position = Vector2(-70, 112)
+
+[node name="Dirt1Sprite3" parent="DirtCollection" unique_id=568854612 instance=ExtResource("5_n13ws")]
+position = Vector2(69, 84)
+
+[node name="BubbleCollection" type="Node" parent="." unique_id=1323179816]
+
+[node name="Bubble" parent="BubbleCollection" unique_id=1266173746 instance=ExtResource("6_vbapg")]
+visible = false
+position = Vector2(37, -183)
+
+[node name="Bubble2" parent="BubbleCollection" unique_id=285770167 instance=ExtResource("6_vbapg")]
+visible = false
+position = Vector2(-93, 43)
+
+[node name="Bubble3" parent="BubbleCollection" unique_id=137225256 instance=ExtResource("6_vbapg")]
+visible = false
+position = Vector2(24, 156)
+
+[node name="Bubble4" parent="BubbleCollection" unique_id=13053408 instance=ExtResource("6_vbapg")]
+visible = false
+position = Vector2(150, 195)
+
+[node name="Bubble5" parent="BubbleCollection" unique_id=716522273 instance=ExtResource("6_vbapg")]
+visible = false
+position = Vector2(-143, 188)
+
+[node name="SpawnColl" type="Node" parent="." unique_id=257729222]
+
+[node name="SpawnCollision" parent="SpawnColl" unique_id=490884679 instance=ExtResource("8_si1lv")]
+position = Vector2(-126, -123)
+
+[node name="SpawnCollision2" parent="SpawnColl" unique_id=332492453 instance=ExtResource("8_si1lv")]
+position = Vector2(19, -195)
+
+[node name="SpawnCollision3" parent="SpawnColl" unique_id=941109771 instance=ExtResource("8_si1lv")]
+position = Vector2(-25, 14)
+
+[node name="SpawnCollision4" parent="SpawnColl" unique_id=938587558 instance=ExtResource("8_si1lv")]
+position = Vector2(-125, 157)
+
+[node name="SpawnCollision5" parent="SpawnColl" unique_id=1704087518 instance=ExtResource("8_si1lv")]
+position = Vector2(148, 186)

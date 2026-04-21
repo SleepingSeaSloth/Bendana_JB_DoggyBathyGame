@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cn0i1fmjxmy0q"]
+
+[ext_resource type="Script" uid="uid://c8jogp4o0mx5l" path="res://bubble.gd" id="1_amq2t"]
+[ext_resource type="Texture2D" uid="uid://dx54dw3j66r85" path="res://OIP (3).webp" id="2_i1mt7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0iu24"]
+size = Vector2(472, 480)
+
+[node name="Bubble" type="Node2D" unique_id=1266173746]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_amq2t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=54401305]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_i1mt7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=204473517]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1803585722 groups=["droppable1"]]
+position = Vector2(-2, 0)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_0iu24")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

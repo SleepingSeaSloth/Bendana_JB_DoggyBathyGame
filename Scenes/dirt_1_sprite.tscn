@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ccpe7x1sngfd1"]
+
+[ext_resource type="Texture2D" uid="uid://bfw58v1uduik2" path="res://PC _ Computer - Starbound - Blocks - Dirt.png" id="1_1ks8s"]
+[ext_resource type="Script" uid="uid://d01v5ijk38qiw" path="res://Scenes/dirt_1_sprite.gd" id="1_af3oa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ks8s"]
+size = Vector2(6.875, 6.375)
+
+[node name="Dirt1Sprite" type="Node2D" unique_id=1233341557]
+scale = Vector2(2, 2)
+script = ExtResource("1_af3oa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=233069505]
+scale = Vector2(2, 2)
+texture = ExtResource("1_1ks8s")
+region_enabled = true
+region_rect = Rect2(66, 10, 12, 12)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=356755298]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2099991431 groups=["droppable2"]]
+position = Vector2(0.125, -0.125)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_1ks8s")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://w277iwrnft6j"]
+
+[ext_resource type="Script" uid="uid://cnlty6u36hto7" path="res://spawn_collision.gd" id="1_xj3xx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gn3kw"]
+
+[node name="SpawnCollision" type="Node2D" unique_id=490884679]
+script = ExtResource("1_xj3xx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1524897194]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1935306743]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_gn3kw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1706028630]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_gn3kw")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
