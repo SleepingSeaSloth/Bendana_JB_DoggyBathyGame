@@ -2,7 +2,21 @@ extends CharacterBody2D
 
 
 @export var move_speed : float = 500
+@onready var interaction_area: InteractionArea = $InteractionArea
 var char_direction : Vector2
+const TEST_SCENE_FOR_MENUS = preload("uid://dwekfsan4qr5o")
+
+
+
+const lines: Array[String] = [
+	"Hey there!"
+]
+
+func _ready():
+	interaction_area.interact = Callable(self, "_dog_tub")
+
+func _dog_tub():
+	get_tree().change_scene_to_packed(TEST_SCENE_FOR_MENUS)
 
 
 func _physics_process(_delta):

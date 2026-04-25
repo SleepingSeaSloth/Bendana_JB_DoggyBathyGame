@@ -27,6 +27,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1891945756 groups=["droppable2"]]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=632431762]
 shape = SubResource("RectangleShape2D_43ah5")

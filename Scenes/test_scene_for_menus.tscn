@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccpe7x1sngfd1" path="res://Scenes/dirt_1_sprite.tscn" id="5_n13ws"]
 [ext_resource type="PackedScene" uid="uid://cn0i1fmjxmy0q" path="res://Scenes/bubble.tscn" id="6_vbapg"]
 [ext_resource type="PackedScene" uid="uid://w277iwrnft6j" path="res://Scenes/spawn_collision.tscn" id="8_si1lv"]
+[ext_resource type="Script" uid="uid://clxtwp4856bw6" path="res://Scenes/game_manager.gd" id="8_vag4o"]
 
 [node name="TestSceneForMenus" type="Node2D" unique_id=1312525357]
 
@@ -89,3 +90,39 @@ position = Vector2(-125, 157)
 
 [node name="SpawnCollision5" parent="SpawnColl" unique_id=1704087518 instance=ExtResource("8_si1lv")]
 position = Vector2(148, 186)
+
+[node name="GameManager" type="Node" parent="." unique_id=941110672]
+unique_name_in_owner = true
+script = ExtResource("8_vag4o")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=220616220]
+
+[node name="Panel" type="Panel" parent="GameManager/CanvasLayer" unique_id=2037442292]
+offset_right = 207.0
+offset_bottom = 123.0
+metadata/_edit_use_anchors_ = true
+
+[node name="BathingProgress" type="Label" parent="GameManager/CanvasLayer/Panel" unique_id=983825641]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
+text = "10 / "
+
+[node name="BathingCounter" type="Label" parent="GameManager/CanvasLayer/Panel" unique_id=2057374301]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 106.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 32
+text = "00"
+
+[node name="Don\'t" type="Label" parent="." unique_id=1905422659]
+offset_left = 334.0
+offset_top = -42.0
+offset_right = 568.0
+offset_bottom = 59.0
+text = "DO NOT USE THE SCRUBBER!!! 
+IT'LL CRASH YOUR GAME!!!
+
+Idk why"

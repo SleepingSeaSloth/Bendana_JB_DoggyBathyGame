@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://b2bmfmqyyfvsb"]
+
+[ext_resource type="Script" uid="uid://dw30ax1rvr7k1" path="res://Scenes/shift_leaver_menu.gd" id="1_s75cu"]
+[ext_resource type="Texture2D" uid="uid://dsxe8s26kk13o" path="res://126-1266416_collection-comments-empty-star-png-clipart.png" id="2_m1rlt"]
+[ext_resource type="Texture2D" uid="uid://c5sx6wcm8n4b6" path="res://Screenshot 2026-04-24 164400.png" id="3_ikygl"]
+[ext_resource type="Texture2D" uid="uid://o61uv7ylv38n" path="res://pngtree-glossy-gold-star-3d-render-png-image_13327190.png" id="3_m1rlt"]
+
+[node name="ShiftLeaverMenu" type="Node2D" unique_id=587443857]
+script = ExtResource("1_s75cu")
+
+[node name="MMButtonManager" type="Control" parent="." unique_id=1487892356]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 431.0
+offset_bottom = 235.0
+
+[node name="Retry" type="Button" parent="MMButtonManager" unique_id=365921302]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 137.0
+offset_right = 379.0
+offset_bottom = 168.0
+text = "Retry"
+
+[node name="Quit" type="Button" parent="MMButtonManager" unique_id=1792498105]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 174.0
+offset_right = 382.0
+offset_bottom = 205.0
+text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=49707918]
+position = Vector2(213, 117)
+zoom = Vector2(3, 3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=794802502]
+
+[node name="Node" type="Node" parent="." unique_id=850681259]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node" unique_id=546255625]
+position = Vector2(152.55, 110.40002)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_m1rlt")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node" unique_id=1562544611]
+position = Vector2(152.00002, 112)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_m1rlt")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node" unique_id=298376690]
+position = Vector2(224, 112)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_m1rlt")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node" unique_id=2124025963]
+position = Vector2(295, 112)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_m1rlt")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node" unique_id=131390042]
+position = Vector2(224.55, 110.4)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_m1rlt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node" unique_id=455253579]
+position = Vector2(293.55002, 110.4)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_m1rlt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1102481021]
+z_index = -6
+position = Vector2(232, 154)
+scale = Vector2(0.5581472, 0.46719158)
+texture = ExtResource("3_ikygl")
+
+[node name="Congrats!!!" type="Label" parent="." unique_id=289457528]
+offset_left = 24.0
+offset_top = 87.0
+offset_right = 412.0
+offset_bottom = 307.00003
+rotation = -0.4184277
+theme_override_colors/font_color = Color(0.73438066, 0.23677543, 0.57608885, 1)
+theme_override_colors/font_shadow_color = Color(0.6627451, 0.20784314, 0.36862746, 0)
+theme_override_colors/font_outline_color = Color(0.8907021, 0.2402139, 0.5490091, 1)
+text = "You did it!
+You washed a dog!!!"
+
+[node name="3Stars" type="Label" parent="." unique_id=1041317632]
+offset_left = 121.99999
+offset_top = 166.99998
+offset_right = 247.0
+offset_bottom = 189.99998
+rotation = -0.20675126
+theme_override_colors/font_color = Color(0.89212275, 0.00049362896, 0.86361897, 1)
+text = "3 Stars because I like you!"
+
+[connection signal="pressed" from="MMButtonManager/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="MMButtonManager/Quit" to="." method="_on_quit_pressed"]

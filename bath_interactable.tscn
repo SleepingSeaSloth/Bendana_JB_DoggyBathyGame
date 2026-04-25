@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://js3jwsquy4w1"]
+
+[ext_resource type="Script" uid="uid://820gkuf8d1bp" path="res://bath_interactable.gd" id="1_ep7pl"]
+[ext_resource type="PackedScene" uid="uid://ctl61h0balb4b" path="res://Interaction/Interation Area/interaction_area.tscn" id="2_iyw6m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsn5l"]
+
+[node name="Bath_interactable" type="Node2D" unique_id=159649227]
+scale = Vector2(5, 5)
+script = ExtResource("1_ep7pl")
+
+[node name="InteractionArea" parent="." unique_id=1739332338 instance=ExtResource("2_iyw6m")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1761609132]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_qsn5l")
