@@ -13624,6 +13624,7 @@ layer_0/tile_data = PackedInt32Array(-393194, 1048576, 31, -327658, 1048576, 32,
 position = Vector2(339, -60)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=339467972]
+visible = false
 z_index = 11
 position = Vector2(305, -68)
 scale = Vector2(0.06486487, 0.073648565)

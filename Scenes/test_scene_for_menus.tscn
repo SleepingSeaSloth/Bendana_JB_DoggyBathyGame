@@ -118,6 +118,7 @@ theme_override_font_sizes/font_size = 32
 text = "00"
 
 [node name="Don\'t" type="Label" parent="." unique_id=1905422659]
+visible = false
 offset_left = 334.0
 offset_top = -42.0
 offset_right = 568.0
